@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rainfall Prediction</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+           body {
+    font-family: Arial, sans-serif;
+    background-color: #74f358;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+input, select {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+        </style>
+    </head>
+<body>
+    <div class="container">
+        <h2>🌦️ Australian Rainfall Prediction</h2>
+        <form id="predict-form">
+            <label for="location">Location:</label>
+            <input type="text" id="location" required>
+
+            <label for="minTemp">Min Temperature (°C):</label>
+            <input type="number" id="minTemp" step="0.1" required>
+
+            <label for="maxTemp">Max Temperature (°C):</label>
+            <input type="number" id="maxTemp" step="0.1" required>
+
+            <label for="windGustSpeed">Wind Speed (km/h):</label>
+            <input type="number" id="windGustSpeed" required>
+
+            <label for="humidity3pm">Humidity:</label>
+            <input type="number" id="humidity3pm" required>
+
+            </select>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <h3 id="prediction-result"></h3>
+    </div>
+</body>
+</html>
+
+
